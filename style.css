@@ -1,0 +1,101 @@
+@font-face {
+    src: url("assets/BlackMango-Light.otf") format("opentype");
+    font-family: "BlackMango-Light";
+    src: url("assets/BlackMango-Bold.otf") format("opentype");
+    font-family: "BlackMango-Bold";
+    font-family: 'Montserrat', sans-serif;
+  }
+
+*{
+    margin: 0;
+}
+.top-home{
+    height: 95vh;
+    padding: 20px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: radial-gradient(#FADFB5, #FFFFFF);
+}
+.top-home h1{
+    font-family: 'BlackMango-Bold';
+    font-size: 7rem;
+    color: #000000;
+    text-align: center;
+  }
+
+.top-home h2{
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .centered-heading {
+        font-size: 1.5rem;
+    }
+    .centered-subheading {
+        font-size: 1.2rem;
+    }
+}
+
+.top-home .scroll-down-home{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.about-home{
+    padding: 20px;
+    margin: 20px;
+}
+
+.about-me{
+    font-family: 'BlackMango-Bold';
+    font-size: 2rem;
+    width: 50%;
+    margin-left: 1rem;
+}
+
+.container {
+    background-color: #fff;
+    width: 50%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+img.mypfp {
+    width: 400px;
+    height: auto;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+ }
+
+/* ----- responsive size adjustments (to do later) ----- */
+/* For small screens */
+/* @media (max-width: 768px) {
+    .top-home {
+    
+
+/* For medium screens */
+/* @media (min-width: 769px) and (max-width: 1024px) {
+    .top-home { */
+
+/* For large screens */
+/* @media (min-width: 1025px) {
+    .top-home {
+        /* Adjust header styles for large screens */
