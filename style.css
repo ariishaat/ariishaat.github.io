@@ -48,17 +48,19 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    border: none;
+    background: transparent;
     font-size: 24px;
     cursor: pointer;
-}
-
+    transition: background-color 0.3s;
+  }
 
 .about-home{
     padding: 20px;
     margin: 20px;
 }
 
-.about-me{
+.subtitles{
     font-family: 'BlackMango-Bold';
     font-size: 2rem;
     width: 50%;
@@ -66,7 +68,8 @@
 }
 
 .container {
-    background-color: #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
     width: 50%;
     float: left;
     padding: 20px;
@@ -84,6 +87,24 @@ img.mypfp {
     clear: both;
     display: table;
  }
+
+ .work-home{
+    padding: 20px;
+    margin: 20px;
+}
+
+.work-content{
+
+ }
+
+ .work-exrt{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    width: 70%;
+    float: left;
+    padding: 20px;
+ }
+
 
 /* ----- responsive size adjustments (to do later) ----- */
 /* For small screens */
