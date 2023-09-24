@@ -31,9 +31,23 @@
 
 .top-home h2{
     font-family: 'Montserrat';
+    font-weight: 300;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 10px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
 @media (max-width: 768px) {
