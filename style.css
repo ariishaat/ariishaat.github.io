@@ -108,11 +108,19 @@ img.mypfp {
     margin: 20px;
 }
 
+.work-exrt{
+    width: 70%;
+    padding: 20px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+ }
+
 .work-container{
 	margin: auto;
-    padding-top: 5%;
+    padding-top: 2%;
     perspective: 800px;
 }
+
 
 .row{
 	display: flex;
