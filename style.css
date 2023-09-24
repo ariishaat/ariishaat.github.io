@@ -9,6 +9,7 @@
 *{
     margin: 0;
 }
+
 .top-home{
     height: 95vh;
     padding: 20px;
@@ -18,6 +19,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    overflow: hidden;
     background: radial-gradient(#FADFB5, #FFFFFF);
 }
 .top-home h1{
@@ -58,6 +60,7 @@
 .about-home{
     padding: 20px;
     margin: 20px;
+    overflow: hidden;
 }
 
 .subtitles{
@@ -69,7 +72,7 @@
 
 .container {
     font-family: 'Montserrat';
-    font-weight: 600;
+    font-weight: 300;
     width: 50%;
     float: left;
     padding: 20px;
@@ -81,42 +84,99 @@ img.mypfp {
     height: auto;
 }
 
+/* --- WORK SECTION ---- */
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
- }
-
- .work-home{
+.work-home{
+    overflow: hidden;
+    min-height: 100vh;
+    align-items: center;
     padding: 20px;
     margin: 20px;
 }
 
-.work-content{
+.work-container{
+	margin: auto;
+    padding-top: 5%;
+    perspective: 800px;
+}
 
- }
+.row{
+	display: flex;
+}
 
- .work-exrt{
+.card {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    margin:10px 40px 30px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.35);
+    border-radius: 2rem;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+
+.card-inner{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.work-body .front,
+.work-body .back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.work-body .front{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+
+.work-body .front h1{
     font-family: 'Montserrat';
-    font-weight: 600;
-    width: 70%;
-    float: left;
-    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.15rem;
+	color: black;
+}
+
+.work-body .front p{
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+	color: black;
+    line-height: 40px;
+    padding: 10%;
+}
+
+.work-body .back{
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+}
+
+.work-body .back p{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+    font-size: 1rem;
+	color: black;
+	margin:0;
+    padding: 10%;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
  }
-
-
-/* ----- responsive size adjustments (to do later) ----- */
-/* For small screens */
-/* @media (max-width: 768px) {
-    .top-home {
-    
-
-/* For medium screens */
-/* @media (min-width: 769px) and (max-width: 1024px) {
-    .top-home { */
-
-/* For large screens */
-/* @media (min-width: 1025px) {
-    .top-home {
-        /* Adjust header styles for large screens */
