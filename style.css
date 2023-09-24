@@ -84,25 +84,21 @@
     margin-left: 1rem;
 }
 
-.container {
-    font-family: 'Montserrat';
-    font-weight: 300;
-    width: 50%;
-    float: left;
-    padding: 20px;
-    box-sizing: border-box;
-}
 
 img.mypfp {
     width: 400px;
     height: auto;
 }
 
+.about-me-exrt{
+    font-family: 'Montserrat';
+    font-weight: 300;
+    line-height: 40px;
+}
 /* --- WORK SECTION ---- */
 
 .work-home{
     overflow: hidden;
-    min-height: 100vh;
     align-items: center;
     padding: 20px;
     margin: 20px;
@@ -116,14 +112,7 @@ img.mypfp {
  }
 
 .work-container{
-	margin: auto;
-    padding-top: 2%;
     perspective: 800px;
-}
-
-
-.row{
-	display: flex;
 }
 
 .card {
@@ -131,8 +120,8 @@ img.mypfp {
     height: 500px;
     position: relative;
     margin:10px 40px 30px;
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.35);
-    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.35) !important;
+    border-radius: 2rem !important;
     transition: transform 1500ms;
     transform-style: preserve-3d;
   }
