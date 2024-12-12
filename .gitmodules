@@ -1,3 +1,8 @@
 [submodule "_advant-cal-web"]
 	path = _advant-cal-web
 	url = https://github.com/ariishaat/advant-webpage.git
+
+
+[submodule "ariishaat.github.io"]
+    path = ariishaat.github.io
+    url = https://github.com/ariishaat/ariishaat.github.io.git
