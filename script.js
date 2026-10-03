@@ -16,6 +16,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
+// =========================
+// CLOSE MOBILE NAVBAR
+// =========================
+
+const navLinksMobile = document.querySelectorAll(
+    ".navbar-nav .nav-link"
+);
+
+const navbarCollapse = document.querySelector(
+    ".navbar-collapse"
+);
+
+navLinksMobile.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if (navbarCollapse.classList.contains("show")) {
+
+            const bsCollapse =
+                bootstrap.Collapse.getInstance(navbarCollapse);
+
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+
+        }
+
+    });
+
+});
     function setupCurrentlySecret() {
         // when user clicks "Currently" on nav bar, show text bubble
         const currentlyBtn = document.getElementById("currentlyBtn");
