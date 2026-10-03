@@ -4,224 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
       </style>
     <title>Arika's webspace</title>
 </head>
 <body>
-    <header class="top-home">
-        <h1 class="name">Arika Ishaat</h1>
-        <h2 class="welcome">Welcome to my portfolio <span>🕊️</span></h2>
-        <button id="scroll-down-home" class="scroll-down-home">
-            <img src="/assets/scroll-down-arrow.png" alt="scroll-down-arrow"/>
-        </button>
-    </header>
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container">
+      <a class="navbar-brand" href="#">Arika Ishaat</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#currently" id="currentlyBtn">Currently</a>
+              <span class="secret-bubble" id="secretBubble">...a secret for now</span>
+            </li>
 
-    <section class="about-home">
-        <h3 class="subtitles">About me</h3>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <p class="about-me-exrt">Hi! Welcome to my page. I am an aspiring software developer based in Toronto. I attend the University of Waterloo, expected to graduate in 2024.  
-                      Some programming languages I worked with include Python, HTML & CSS, Javascript, and Java. I have a high interest in computer vision, full-stack development, and machine learning. 
-                      My coding skills are mostly self-taught, and I definitely have a long way to go. This is just a small percent of my experience, skills, and knowledge.  
-                      Outside of work and school, I follow developments in Mathematics, read a lot of books, and travel whenever I get the chance.</p>
-                </div>
-            <div class="col">
+            </ul>
 
-                <img class="mypfp" src="/assets/pw-pfp.jpg" alt="my-picture"/>
-
-            </div>
-         </div>
-         <!-- <div class="clearfix"></div> -->
-    </section>
-    <section class="work-home">
-        <h3 class="subtitles">Work</h3>
-        <p class="work-exrt">Here are my 3 most recent/relevant work experience. I 
-            was very grateful to recieve excellent on my work term reports from
-             all of my past co-op. Hover your mouse over to flip!</p>
-
-        <div class="work-body">
-        <div class="work-container">
-            <div class="row">
-                <!-- flip card one -->
-                <div class="col">
-                <div class="work-card">
-                    <div class="card-inner">
-                        <div class="front" style="background-color:#C4A092;">
-                        <h1>Quality Engineer, Co-op</h1>
-                        <p>
-                            <br>Vivid Seats
-                            <br>Sep. 2023 - Dec. 2023
-                        </p>
-                        </div>
-                        <div class="back" style="background-color:#C4A092;">
-                            <p>As a QE, I have actively engaged in both manual and automated 
-                              testing. I was first introduced to automation testing in this position. I create
-                              test scripts using Java to be used in the continuous improvement of our 
-                              testing pipeline. </p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-
-                <!-- flip card two -->
-                <div class="col">
-                <div class="work-card">
-                    <div class="card-inner">
-                        <div class="front" style="background-color:#AD795B;">
-                            <h1> IT QA Assistant, Co-op</h1>
-                            <p>
-                                <br>Ministry Of Education
-                                <br>Sep. 2022 - Apr. 2023
-                            </p>
-                        </div>
-                        <div class="back" style="background-color:#AD795B;">
-                            <p>In my role in QA, I primarily focused on manual testing 
-                              in the realm of front-end development. I worked with an agile 
-                              team to meet high standards of functionality and user experience. 
-                              My work involved in-dept exploration and collaborating with developers 
-                              to solve issues found in various applications. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <!-- flip card three -->
-            <div class="col">
-                <div class="work-card">
-                    <div class="card-inner">
-                        <div class="front" style="background-color:#8F5D46;">
-                            <h1>Senior Course and Tech Assisstant, Co-op</h1>
-                            <p>
-                                <br>University of Waterloo, Fine Arts Dept.
-                                <br>Sep. 2021 - Dec. 2021
-                            </p>
-                        </div>
-                        <div class="back" style="background-color:#8F5D46;">
-                            <p>I created user-friendly software documentation and manuals, 
-                              diagnosed bugs and suggested improvements to new software implementation 
-                              processes. I created simple web forms used internally by the department 
-                              using front-end languages and Google script. I have also created a low-code 
-                              asset management app using MS Suite.</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-         </div>
-         </div>
-    </section>
-
-    <section class="about-projects">
-        <h3 class="subtitles">Projects</h3>
-
-        <div id="carouselExampleControls" class="carousel slide" data-interval="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="cards-wrapper">
-                <div class="card">
-                  <img src="/assets/proj-slide-ics/toDoApp.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">To Do App</h5>
-                    <p class="card-text"> Swift </p>
-                    <div class="text-center"><a target="_blank" href="https://github.com/ariishaat/toDoApp" class="card-btn">View here</a></div>
-                  </div>
-                </div>
-                <div class="card d-none d-md-block">
-                  <img src="/assets/proj-slide-ics/hackathon.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Kata</h5>
-                    <p class="card-text"> Python | HTML </p>
-                    <div class="text-center"><a target="_blank" href="https://devpost.com/software/kata-6cf1am" class="card-btn">View here</a></div>
-                  </div>
-                </div>
-                <div class="card d-none d-md-block">
-                  <img src="/assets/proj-slide-ics/timer.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title"> Pomodoro Timer </h5>
-                    <p class="card-text"> Python</p>
-                    <div class="text-center"><a target="_blank" href="https://github.com/ariishaat/pomodoro-timer" class="card-btn">View here</a></div>
-                  </div>
-                </div>
-              </div>
-              </div>
-              <div class="carousel-item">
-                <div class="cards-wrapper">
-                  <div class="card">
-                    <img src="/assets/proj-slide-ics/calculator.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Calculator</h5>
-                      <p class="card-text"> HTML | CSS | JS </p>
-                      <div class="text-center"><a target="_blank" href="https://github.com/ariishaat/simple-calculator" class="card-btn">View here</a></div>
-                    </div>
-                  </div>
-                  <div class="card d-none d-md-block">
-                    <img src="/assets/proj-slide-ics/password.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Password Generator</h5>
-                      <p class="card-text"> Python</p>
-                      <div class="text-center"><a target="_blank" href="https://github.com/ariishaat/random-password-generator" class="card-btn">View here</a></div>
-                    </div>
-                  </div>
-                  <div class="card d-none d-md-block">
-                    <img src="/assets/proj-slide-ics/snake.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Snake Game</h5>
-                      <p class="card-text"> HTML | CSS | JS </p>  
-                      <div class="text-center"><a target="_blank" href="https://github.com/ariishaat/snake-game" class="card-btn">View here</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="carousel-item">
-                <div class="cards-wrapper">
-                  <div class="card d-none d-md-block">
-                    <img src="/assets/proj-slide-ics/cross.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Tic-Tac-Toe Game</h5>
-                      <p class="card-text"> HTML | CSS | JS </p>  
-                      <div class="text-center"><a target="_blank" href="https://github.com/ariishaat/tic-tac-toe" class="card-btn">View here</a></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span aria-hidden="true"><img src="/assets/slider-arrow.png"></span>
-              <span class="sr-only">Previous</span>
+            <a href="#contact" class="btn btn-link">
+                Let's Connect →
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span aria-hidden="true"> <img src="/assets/slider-arrow.png"> </span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
 
-    </section>
+        </div>
+    </div>
+</nav>
+  
+<!-- ================= ABOUT ================= -->
+  <section id="about" class="py-5">
+    <div class="container">
+    <div class="row py-5">
 
-    <div class="footer">
-      <footer>
-        <div class="col item social">
-                      <a href="mailto:aishaat@uwaterloo.ca" target="_blank"><iconify-icon icon="clarity:email-solid"></iconify-icon></a>
-                      <a href="https://github.com/ariishaat" target="_blank"><iconify-icon icon="jam:github"></iconify-icon></a>
-                      <a href="https://www.linkedin.com/in/ariishaat/" target="_blank"><iconify-icon icon="ion:logo-linkedin"></iconify-icon></a>
-                      <p>Designed and Built by Arika Ishaat</p>
-                      <!-- <p class="advant"><a href="_advant-cal-web/advant.html">friends only</a></p> -->
+      <!-- Left column -->
+      <div class="col-lg-4">
+        <h2 class="display-5 fw-light">Hi, I'm Arika.</h2>
+        <div class="text-left">
+          <img src="assets/pfp.jpg" alt="A photo of me" class="img-fluid about-image">
+        </div>
+      </div>
+
+      <div class="col-lg-5 offset-lg-1">
+          <p class="fs-5">
+            Welcome to my page. I am a Quality Engineer based in Toronto
+            and a University of Waterloo alumna. I have worked with programming 
+            languages and technologies including Python, HTML, CSS, JavaScript, 
+            and Java.
+            about tech concepts I am interested such as computer vision, full-stack 
+            development, and machine learning. My coding skills are mostly self-taught,
+            and I definitely have a long way to go. Outside of tech, I follow new 
+            developments in Mathematics, read a lot of books, and travel whenever I get the chance.
+      </p>
+
+          <p>
+            Outside of my professional work, I enjoy exploring new areas of technology, 
+            particularly computer vision, full-stack development, and machine learning. 
+            Much of my coding experience has been self-taught, and I am always looking 
+            for opportunities to expand my skills and learn something new.
+          </p>
+
+          <p>
+            Beyond tech, I enjoy following developments in mathematics, reading, and travelling whenever I get the chance.
+          </p>
+
+      </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= WORK EXPERIENCE ================= -->
+<section id="experience" class="py-5">
+    <div class="container">
+        <div class="mb-5">
+            <p class="text-uppercase small">Work Experience</p>
+
+            <h2 class="display-5 fw-light">
+                Where I Worked
+            </h2>
         </div>
 
-      </footer>
+        <div class="experience-timeline">
+        <!-- Experiences -->
+        <div class="row flex-nowrap gx-4 gx-lg-5 pb-3 experience-row">
+
+            <!-- Experience 1 -->
+            <div class="col-10 col-md-6 col-lg-4 experience-item">
+                <span class="timeline-dot"></span>
+                <div class="experience-content">
+                    <h5 class="mb-3">MDLand</h5>
+                    <h6 class="text-secondary fw-normal mb-2">SDET QA Engineer</h6>
+                    <p class="text-secondary mb-4">Oct 2024 - Present</p>
+                    <ul>
+                        <li>Verified 150+ feature requests and bug fixes deployed to production in under 6 months using JIRA</li>
+                        <li>Used Playwright and MCP to migrate legacy tests and build scalable E2E automation pipelines</li>
+                        <li>Used Postman and SQL to verify backend data accuracy and identify usability improvements</li>
+                        <li>Executed functional, regression, and end-to-end testing to verify application functionality, 
+                            data accuracy, and business requirements</li>
+                    </ul>
+                </div>
+            </div>
+
+           <!-- Experience 2 -->
+            <div class="col-10 col-md-6 col-lg-4 experience-item">
+                <span class="timeline-dot"></span>
+                <div class="experience-content">
+                    <h5 class="mb-3">Vivid Seats</h5>
+                    <h6 class="text-secondary fw-normal mb-2">Quality Engineer, Co-op</h6>
+                    <p class="text-secondary mb-4">Sep 2023 - Dec 2023</p>
+                    <ul>
+                        <li>Used Jira to verify user stories, document bugs, and track QA tasks</li>
+                        <li>Developed reusable automation tests using Java, Selenium, JUnit, and WebDriver</li>
+                        <li>Monitored builds and deployments using Jenkins and Skipper, and validated API 
+                            integrations with Swagger</li>
+                        <li>Supported Testmo rollout and onboarded teams through demos and SOP documentation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience 3 -->
+            <div class="col-10 col-md-6 col-lg-4 experience-item">
+                <span class="timeline-dot"></span>
+                <div class="experience-content">
+                  <h5 class="mb-3">Ministry of Education</h5>
+                    <h6 class="text-secondary fw-normal mb-2">IT Quality Assurance Assistant, Co-op</h6>
+                    <p class="text-secondary mb-4">Sep 2022 - Apr 2023</p>
+                    <ul>
+                        <li>Conducted front-end, smoke, regression, and compatibility testing
+                            for the Ontario Digital Curriculum Platform</li>
+                        <li>Verified user stories and bug tickets across development, staging,
+                             and production environments</li>
+                        <li>Collaborated with Agile teams to identify defects, design inconsistencies, 
+                            and process improvements</li>
+                        <li>Ensured web accessibility compliance with AODA and WCAG 2.1 guidelines</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Experience 4 -->
+            <div class="col-10 col-md-6 col-lg-4 experience-item">
+                <span class="timeline-dot"></span>
+                <div class="experience-content">
+                    <h5 class="mb-3">University of Waterloo, Fine Arts Dept.</h5>
+                    <h6 class="text-secondary fw-normal mb-2">Senior Course and Technical Support Assistant, Co-op </h6>
+                    <p class="text-secondary mb-4"> Sep 2021 - Dec 2021</p>
+                    <ul>
+                        <li>Created software documentation and user manuals to support features and best practices</li>
+                        <li>Identified 10 defects and missing features, providing recommendations for improvements</li>
+                        <li>Developed web forms using HTML, CSS, JavaScript, and Google Apps Script for inventory management</li>
+                        <li>Built an inventory management application using PowerApps, Power Automate, and Microsoft Lists</li>
+                    </ul>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-5">
+      <div>
+        <p class="text-uppercase small">Projects</p>
+        <h2 class="display-5 fw-light">What I built</h2>
+      </div>
+      <!-- <a href="#" class="btn btn-link">View All →</a> -->
     </div>
 
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <div class="row g-4" id="projectTrack">
+      <!-- Project 1 -->
+       <div class="project-item col-12 col-md-6 col-lg-3">
+        <article class="project">
+          <div class="d-flex align-items-start gap-3">
+            <img src="assets/folder-icon.png" class="flex-shrink-0" alt="project folder icon">
+            <div>
+              <h3 class="h5 mb-1">PDF File Merge</h3>
+              <p class="text-muted small mb-2">Python/Command Shell application</p>
+              <a href="https://github.com/ariishaat/pdf-merger" target="_blank" class="proj-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+      </div>
 
+      <!-- Project 2 -->
+       <div class="project-item col-12 col-md-6 col-lg-3">
+        <article class="project">
+          <div class="d-flex align-items-start gap-3">
+            <img src="assets/folder-icon.png" class="flex-shrink-0" alt="project folder icon">
+            <div>
+              <h3 class="h5 mb-1">To-Do App</h3>
+              <p class="text-muted small mb-2">iOS Application</p>
+              <a href="https://github.com/ariishaat/toDoApp" target="_blank" class="proj-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Project 3 -->
+       <div class="project-item col-12 col-md-6 col-lg-3">
+        <article class="project">
+          <div class="d-flex align-items-start gap-3">
+            <img src="assets/folder-icon.png" class="flex-shrink-0" alt="project folder icon">
+            <div>
+              <h3 class="h5 mb-1">Random Password Generator</h3>
+              <p class="text-muted small mb-2">Python Application</p>
+              <a href="https://github.com/ariishaat/random-password-generator" target="_blank" class="proj-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Project 4 -->
+       <div class="project-item col-12 col-md-6 col-lg-3">
+        <article class="project">
+          <div class="d-flex align-items-start gap-3">
+            <img src="assets/folder-icon.png" class="flex-shrink-0" alt="project folder icon">
+            <div>
+              <h3 class="h5 mb-1">Kata</h3>
+              <p class="text-muted small mb-2">Full Stack Hackathon Project</p>
+              <a href="https://devpost.com/software/kata-6cf1am?ref_content=my-projects-tab&ref_feature=my_projects" target="_blank" class="proj-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Project 5 -->
+       <div class="project-item col-12 col-md-6 col-lg-3">
+        <article class="project">
+          <div class="d-flex align-items-start gap-3">
+            <img src="assets/folder-icon.png" class="flex-shrink-0" alt="project folder icon">
+            <div>
+              <h3 class="h5 mb-1">Pomodoro Timer</h3>
+              <p class="text-muted small mb-2">Python OS Application</p>
+              <a href="https://github.com/ariishaat/pomodoro-timer" target="_blank" class="proj-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Project 6 -->
+       <div class="project-item col-12 col-md-6 col-lg-3">
+        <article class="project">
+          <div class="d-flex align-items-start gap-3">
+            <img src="assets/folder-icon.png" class="flex-shrink-0" alt="project folder icon">
+            <div>
+              <h3 class="h5 mb-1">Calculator</h3>
+              <p class="text-muted small mb-2">Web Application</p>
+              <a href="https://codepen.io/ariishaat/pen/OJEKGpr" target="_blank" class="proj-link">View Project →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+  </div>
+      <!-- Slider controls -->
+        <div class="d-flex justify-content-end gap-2 mt-4">
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="projectPrev"
+            aria-label="Previous projects"
+          >
+            ←
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            id="projectNext"
+            aria-label="Next projects"
+          >
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+<footer id="contact" class="py-5">
+  <div class="container text-center">
+    <h3 class="display-5 fw-light">Let's Connect.</h3>
+    <div class="footer-icons">
+      <a href="mailto:aishaat@uwaterloo.ca?subject=Portfolio%20Inquiry" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/ariishaat/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/ariishaat" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <p class="footer-credit">Designed and Built by Arika Ishaat</p>
+  </div>
+</footer>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
