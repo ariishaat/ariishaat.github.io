@@ -32,6 +32,7 @@ body {
 .navbar {
     background: var(--background);
     border-bottom: 1px solid var(--border);
+
 }
 
 .navbar-brand {
@@ -44,13 +45,16 @@ body {
 .navbar-brand:hover {
     color: var(--text);
 }
+.nav-item {
+    position: relative;
+}
+
 
 .nav-link {
     color: var(--text);
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-
     position: relative;
     padding-left: 5 !important;
     padding-right: 5 !important;
@@ -74,6 +78,46 @@ body {
 
 .nav-link:hover {
     color: var(--text);
+}
+
+
+.secret-bubble {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+
+    background: var(--text);
+    color: var(--background);
+    padding: 8px 12px;
+    border-radius: 6px;
+
+    font-size: 0.7rem;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+.secret-bubble::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--text)
+}
+
+.secret-bubble.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(4px);
 }
 
 .btn-link {

@@ -1,58 +1,56 @@
-const workCarousel = document.getElementById("workCarousel");
-const workNext = document.getElementById("workNext");
-const workPrev = document.getElementById("workPrev");
+document.addEventListener("DOMContentLoaded", function () {
+    function setupSmoothNavigation() {
+        // smooth navigation when user clicks on an item on nav bar
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener("click", function (event) {
+                const target = document.querySelector(
+                    this.getAttribute("href")
+                );
+                if (!target) return;
+                event.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            });
+        });
+    }
 
-const cardWidth = 452; // 420px card + 32px gap
+    function setupCurrentlySecret() {
+        // when user clicks "Currently" on nav bar, show text bubble
+        const currentlyBtn = document.getElementById("currentlyBtn");
+        const secretBubble = document.getElementById("secretBubble");
+        const navItem = currentlyBtn?.closest(".nav-item");
 
+        if (!currentlyBtn || !secretBubble) return;
 
-// =========================
-// SMOOTH NAVIGATION
-// =========================
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-    link.addEventListener("click", function (event) {
-
-        const target = document.querySelector(
-            this.getAttribute("href")
-        );
-
-        if (!target) return;
-
-        event.preventDefault();
-
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+        currentlyBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            secretBubble.classList.toggle("show");
         });
 
-    });
+        navItem.addEventListener("mouseleave", function () {
+            secretBubble.classList.remove("show");
+        });
 
-});
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-
+    //project section related functions
     const projects = document.querySelectorAll(".project-item");
     const prevButton = document.getElementById("projectPrev");
     const nextButton = document.getElementById("projectNext");
 
     let currentPage = 0;
-
     function getItemsPerPage() {
-
         if (window.innerWidth < 768) {
             return 1;
         }
-
         if (window.innerWidth < 992) {
             return 2;
         }
-
         return 4;
     }
-
     function updateProjects() {
-
         const itemsPerPage = getItemsPerPage();
         const totalPages = Math.ceil(projects.length / itemsPerPage);
 
@@ -60,26 +58,20 @@ document.addEventListener("DOMContentLoaded", function () {
             currentPage = totalPages - 1;
         }
 
+        const start = currentPage * itemsPerPage;
+        const end = start + itemsPerPage;
+
         projects.forEach((project, index) => {
-
-            const start = currentPage * itemsPerPage;
-            const end = start + itemsPerPage;
-
-            if (index >= start && index < end) {
-                project.classList.add("active");
-            } else {
-                project.classList.remove("active");
-            }
-
+            project.classList.toggle(
+                "active",
+                index >= start && index < end
+            );
         });
 
         prevButton.disabled = currentPage === 0;
         nextButton.disabled = currentPage >= totalPages - 1;
     }
-
-
-    nextButton.addEventListener("click", function () {
-
+    function nextProjectPage() {
         const itemsPerPage = getItemsPerPage();
         const totalPages = Math.ceil(projects.length / itemsPerPage);
 
@@ -87,26 +79,24 @@ document.addEventListener("DOMContentLoaded", function () {
             currentPage++;
             updateProjects();
         }
-
-    });
-
-
-    prevButton.addEventListener("click", function () {
-
+    }
+    function previousProjectPage() {
         if (currentPage > 0) {
             currentPage--;
             updateProjects();
         }
-
-    });
-
-
-    window.addEventListener("resize", function () {
+    }
+    function resetProjectCarousel() {
         currentPage = 0;
         updateProjects();
-    });
+    }
 
+    prevButton.addEventListener("click", previousProjectPage);
+    nextButton.addEventListener("click", nextProjectPage);
+    window.addEventListener("resize", resetProjectCarousel);
 
+    setupSmoothNavigation();
+    setupCurrentlySecret();
     updateProjects();
 
 });
